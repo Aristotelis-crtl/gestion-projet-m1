@@ -1,0 +1,6 @@
+{"cities": {
+    "Paris": {
+      "": "Wow, this key is nested even deeper."
+    },
+    "key": "This key is nested inside a namespace."
+  }}
