@@ -16,7 +16,7 @@ const Home = () => {
         <div className="flex h-screen items-center">
           <div
             id="map"
-            className="w-1/2 border rounded-xl mr-1 relative h-3/4 overflow-hidden"
+            className="w-1/2 border border-red-800 rounded-xl mr-1 relative h-3/4 overflow-hidden"
           >
             <ReactMapGL
               {...viewport}
