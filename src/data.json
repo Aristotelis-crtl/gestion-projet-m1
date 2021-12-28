@@ -1,17 +1,61 @@
-
-{ "cities": [{
-    "ville": "Paris",
-    "lieux": [{
-        "nom": "Tour Eiffel",
-        "latitude": 48.85837,
-        "longitude" : 2.294481,
-        "type":"monument",
-        "ratings":3
-    }, {
-        "nom": "Musée du Louvres",
-        "latitude": 48.861,
-        "longitude": 2.335833,
-        "type":"monument",
-        "ratings":4
-    }]
-}]}
+{
+    "cities":[
+       {
+          "ville":"Paris",
+          "lieux":[
+             {
+                "nom":"Tour Eiffel",
+                "latitude":48.85837,
+                "longitude":2.294481,
+                "type":"monument",
+                "ratings":3
+             },
+             {
+                "nom":"Musée du Louvres",
+                "latitude":48.861,
+                "longitude":2.335833,
+                "type":"monument",
+                "ratings":4
+             }
+          ]
+       },
+       {
+          "ville":"Lyon",
+          "lieux":[
+             {
+                "nom":"Tour Eiffel",
+                "latitude":48.85837,
+                "longitude":2.294481,
+                "type":"monument",
+                "ratings":3
+             },
+             {
+                "nom":"Musée du Louvres",
+                "latitude":48.861,
+                "longitude":2.335833,
+                "type":"culte",
+                "ratings":4
+             }
+          ]
+       },
+       {
+          "ville":"New York",
+          "lieux":[
+             {
+                "nom":"Tour Eiffel",
+                "latitude":48.85837,
+                "longitude":2.294481,
+                "type":"monument",
+                "ratings":3
+             },
+             {
+                "nom":"Musée du Louvres",
+                "latitude":48.861,
+                "longitude":2.335833,
+                "type":"monument",
+                "ratings":4
+             }
+          ]
+       }
+    ]
+ }

@@ -2,7 +2,8 @@ import React from "react";
 import pic from "../img/photo.jpeg"; // Tell webpack this JS file uses this image
 import { useState } from "react";
 import useCities from "../hooks/useCities.js";
-
+import { ReactComponent as Culte } from "../svg/culte.svg";
+import ListItem from "./ListItem";
 const Home = () => {
   const [open, setOpen] = useState(true);
   const cities = useCities();
@@ -19,15 +20,6 @@ const Home = () => {
         </div>
       </div>
       <>
-        {/* <div
-          className="rounded-full bg-yellowperso mx-2 cursor-pointer mt-4 z-10 px-2"
-          onClick={() => setOpen(!open)}
-        >
-          <Collapsible trigger="dzqdqzdqz" {...{ open, handleTriggerClick }}>
-            <div className="bg-red-900 rounded-full mt-4">fzdknjdzq</div>
-          </Collapsible>
-        </div> */}
-
         <div className="flex justify-center my-2">
           <div
             onClick={() => setOpen(!open)}
@@ -42,38 +34,36 @@ const Home = () => {
               !open ? "h-0" : "h-full"
             }`}
           >
-            <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition delay-1000 shadow ">
-              <a
-                href="#"
-                className="block bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl"
-              >
-                Section 01
-              </a>
-            </li>
-            <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition back delay-1000 shadow ">
-              <a
-                href="#"
-                className="block bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl"
-              >
-                Section 02
-              </a>
-            </li>
-            <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition back delay-1000 shadow ">
-              <a
-                href="#"
-                className="block bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl"
-              >
-                Section 03
-              </a>
-            </li>
-            <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition back delay-1000 shadow ">
-              <a
-                href="#"
-                className="block bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl"
-              >
-                Section 04
-              </a>
-            </li>
+            {cities.map((city) => (
+              <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition delay-1000 shadow ">
+                <div className="">
+                  <div className="flex bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl pl-2">
+                    <p>{city.ville}</p>
+                    <span className="flex">
+                      <p>
+                        {
+                          (city.lieux.reduce((prev, curr) => {
+                            if (prev.type === "monument") {
+                              prev = prev + 1;
+                              console.log(curr.type, "sum", prev);
+                            }
+                            console.log(curr.type, "oui", prev);
+                            return prev;
+                          }),
+                          0)
+                        }
+                        {/* {
+                          city.lieux.reduce(function (allType, type) {
+                            if(type.type === 'monument')
+                          })
+                        } */}
+                      </p>
+                      <Culte className="w-4" />
+                    </span>
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </>
