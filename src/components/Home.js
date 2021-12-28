@@ -29,7 +29,7 @@ const Home = () => {
             onClick={() => setOpen(!open)}
             className="w-11/12 bg-yellowperso rounded-2xl flex"
           >
-            click me
+            Découvrir la liste des villes:
           </div>
         </div>
         <div className="relative w-full h-64">
@@ -42,35 +42,46 @@ const Home = () => {
               <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition delay-1000 shadow ">
                 <div className="">
                   <div className="flex bg-white text-2xl no-underline transition-colors delay-3000 rounded-2xl pl-2">
-                    <div className="flex w-1/4 justify-between">
+                    <div className="flex w-1/4 justify-between items-center">
                       <p className="w-1/2 text-left">{city.ville}</p>
-                      <span className="flex">
-                        <p>
-                          {city.lieux.filter((c) => c.type === "culte").length}
-                        </p>
-                        <Culte className="w-4" />
-                      </span>
-                      <span className="flex">
-                        <p>
-                          {
-                            city.lieux.filter((c) => c.type === "monument")
-                              .length
-                          }
-                        </p>
-                        <Monument className="w-4" />
-                      </span>
-                      <span className="flex">
-                        <p>
-                          {city.lieux.filter((c) => c.type === "place").length}
-                        </p>
-                        <Musee className="w-4" />
-                      </span>
-                      <span className="flex">
-                        <p>
-                          {city.lieux.filter((c) => c.type === "musee").length}
-                        </p>
-                        <Place className="w-4" />
-                      </span>
+                      <div className="flex justify-between">
+                        <span className="flex">
+                          <p>
+                            {
+                              city.lieux.filter((c) => c.type === "culte")
+                                .length
+                            }
+                          </p>
+                          <Culte className="w-4" />
+                        </span>
+                        <span className="flex">
+                          <p>
+                            {
+                              city.lieux.filter((c) => c.type === "monument")
+                                .length
+                            }
+                          </p>
+                          <Monument className="w-4" />
+                        </span>
+                        <span className="flex">
+                          <p>
+                            {
+                              city.lieux.filter((c) => c.type === "place")
+                                .length
+                            }
+                          </p>
+                          <Musee className="w-4" />
+                        </span>
+                        <span className="flex">
+                          <p>
+                            {
+                              city.lieux.filter((c) => c.type === "musee")
+                                .length
+                            }
+                          </p>
+                          <Place className="w-4" />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

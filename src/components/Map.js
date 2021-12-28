@@ -6,12 +6,11 @@ import data from "../data.json";
 const Map = () => {
   const [viewport, setViewport] = useState({
     width: "100%",
-    height: "100%",
+    height: "80%",
     latitude: 48.8,
     longitude: 2.3,
     zoom: 8,
   });
-  console.log(data.cities);
 
   const cities = data.cities;
 
@@ -22,7 +21,10 @@ const Map = () => {
           <h1>{cities[0].ville}</h1>
         </div>
         <div className="flex h-screen items-center justify-center">
-          <div id="map" className="w-3/4 h-full mr-1 relative overflow-hidden">
+          <div
+            id="map"
+            className=" w-10/12 h-full mr-1 relative overflow-hidden"
+          >
             <ReactMapGL
               {...viewport}
               onViewportChange={(nextViewport) => setViewport(nextViewport)}
