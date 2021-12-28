@@ -3,6 +3,10 @@ import pic from "../img/photo.jpeg"; // Tell webpack this JS file uses this imag
 import { useState } from "react";
 import useCities from "../hooks/useCities.js";
 import { ReactComponent as Culte } from "../svg/culte.svg";
+import { ReactComponent as Monument } from "../svg/monument.svg";
+import { ReactComponent as Musee } from "../svg/musee.svg";
+import { ReactComponent as Place } from "../svg/place.svg";
+
 import ListItem from "./ListItem";
 const Home = () => {
   const [open, setOpen] = useState(true);
@@ -37,29 +41,37 @@ const Home = () => {
             {cities.map((city) => (
               <li className="relative inline-block mx-2 leading-normal w-11/12 m-0 mb-1 transition delay-1000 shadow ">
                 <div className="">
-                  <div className="flex bg-white lowercase text-2xl no-underline transition-colors delay-3000 rounded-2xl pl-2">
-                    <p>{city.ville}</p>
-                    <span className="flex">
-                      <p>
-                        {
-                          (city.lieux.reduce((prev, curr) => {
-                            if (prev.type === "monument") {
-                              prev = prev + 1;
-                              console.log(curr.type, "sum", prev);
-                            }
-                            console.log(curr.type, "oui", prev);
-                            return prev;
-                          }),
-                          0)
-                        }
-                        {/* {
-                          city.lieux.reduce(function (allType, type) {
-                            if(type.type === 'monument')
-                          })
-                        } */}
-                      </p>
-                      <Culte className="w-4" />
-                    </span>
+                  <div className="flex bg-white text-2xl no-underline transition-colors delay-3000 rounded-2xl pl-2">
+                    <div className="flex w-1/4 justify-between">
+                      <p className="w-1/2 text-left">{city.ville}</p>
+                      <span className="flex">
+                        <p>
+                          {city.lieux.filter((c) => c.type === "culte").length}
+                        </p>
+                        <Culte className="w-4" />
+                      </span>
+                      <span className="flex">
+                        <p>
+                          {
+                            city.lieux.filter((c) => c.type === "monument")
+                              .length
+                          }
+                        </p>
+                        <Monument className="w-4" />
+                      </span>
+                      <span className="flex">
+                        <p>
+                          {city.lieux.filter((c) => c.type === "place").length}
+                        </p>
+                        <Musee className="w-4" />
+                      </span>
+                      <span className="flex">
+                        <p>
+                          {city.lieux.filter((c) => c.type === "musee").length}
+                        </p>
+                        <Place className="w-4" />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </li>
