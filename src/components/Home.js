@@ -6,9 +6,7 @@ import useCities from "../hooks/useCities.js";
 const Home = () => {
   const [open, setOpen] = useState(true);
   const cities = useCities();
-  console.log("home", cities);
 
-  console.log(open);
   return (
     <>
       <div className="w-full shadow-lg rounded-md bg-white  max-w-sm flex ml-14 content-div mt-8 z-10">
