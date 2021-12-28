@@ -1,6 +1,17 @@
-{"cities": {
-    "Paris": {
-      "": "Wow, this key is nested even deeper."
-    },
-    "key": "This key is nested inside a namespace."
-  }}
+
+{ "cities": [{
+    "ville": "Paris",
+    "lieux": [{
+        "nom": "Tour Eiffel",
+        "latitude": 48.85837,
+        "longitude" : 2.294481,
+        "type":"monument",
+        "ratings":3
+    }, {
+        "nom": "Musée du Louvres",
+        "latitude": 48.861,
+        "longitude": 2.335833,
+        "type":"monument",
+        "ratings":4
+    }]
+}]}

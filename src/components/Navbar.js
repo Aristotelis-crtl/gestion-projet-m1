@@ -9,38 +9,48 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-blueperso px-5 py-5 text-white text-center overflow-hidden flex justify-between">
-        <h1 className="ml-20">{title}</h1>
-        <button className="border rounded border-white px-2 hover:bg-white hover:text-black bg-blueperso focus:outline-none transition ease-in duration-300">
-          Se connecter
-        </button>
-      </div>
-
-      <nav
-        className={
-          sidebar
-            ? "bg-blueperso w-64 h-screen flex justify-center fixed top-0 left-0 origin-top  duration-700 scale-y-0"
-            : "bg-blueperso w-64 h-screen flex justify-center fixed top-0 -left-full origin-top  duration-700 scale-y-0"
-        }
-      >
-        <div className="w-full">
-          <div className="bg-blueperso w-full h-16 flex justify-between align-center px-2 pt-3">
-            <p className="text-white px-2 text-xl mb-2">App admin</p>
-            <span className="menu-bars text-white mt-1"></span>
-          </div>
-          <div className="text-white font-bold text-xl  w-10/12 flex flex-col space-y-1 justify-start align-center mx-4">
-            <Link
-              to="/"
-              className="px-1 py-1 flex hover:bg-green-400 hover:border-4 hover:rounded-xl"
+      <nav class="relative select-none bg-blueperso lg:flex lg:items-stretch w-full">
+        <div class="flex flex-no-shrink items-stretch h-12">
+          <Link
+            to="/"
+            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+          >
+            Accueil
+          </Link>
+          <Link
+            to="/apropos"
+            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+          >
+            A propos
+          </Link>
+          <Link
+            to="/temp"
+            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+          >
+            temp
+          </Link>
+          <button class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+            <svg
+              class="fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
-              <span className="mx-2 ">Code promo</span>
-            </Link>
-            <Link
-              to="/analytics"
-              className="px-1 py-1 flex hover:bg-green-400 hover:border-4 hover:rounded-xl"
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+            <svg
+              class="fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
-              <span className="mx-2">Analytics</span>
-            </Link>
+              <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+            </svg>
+          </button>
+        </div>
+        <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
+          <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            <p class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
+              TODO: fonctionnalité
+            </p>
           </div>
         </div>
       </nav>
