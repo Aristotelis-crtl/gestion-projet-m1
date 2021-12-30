@@ -20,14 +20,16 @@ const LieuInfo = (props) => {
   <p>dzqdzq</p>;
 
   return (
-    <div className="text-white">
-      <div className="divide-y">
-        <h1 className="">{displayName}</h1>
-        <p>Description:</p>
+    <>
+      <div className="text-white">
+        <div className="divide-y">
+          <h1 className="">{displayName}</h1>
+          <p>Description:</p>
+        </div>
+        <p>{info.description}</p>
+        {stars()}
       </div>
-      <p>{info.description}</p>
-      {stars()}
-    </div>
+    </>
   );
 };
 
