@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
-import marker from "../img/marker.png"; // Tell webpack this JS file uses this image
+import ReactMapGL, { Popup } from "react-map-gl";
 import data from "../data.json";
+import Markers from "./Markers";
+import LieuInfo from "./LieuInfo";
 const Map = () => {
   const [viewport, setViewport] = useState({
     width: "100%",
@@ -13,6 +14,7 @@ const Map = () => {
   });
 
   const cities = data.cities;
+  const [popupInfo, setPopupInfo] = useState(null);
 
   return (
     <>
@@ -31,17 +33,20 @@ const Map = () => {
               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
               className="border border-red-800 rounded-xl"
             >
-              {cities[0].lieux.map((cities, i) => (
-                <Marker
-                  latitude={cities.latitude}
-                  longitude={cities.longitude}
-                  offsetLeft={-20}
-                  offsetTop={-10}
-                  key={i}
+              <Markers data={cities} onClick={setPopupInfo} />
+              {popupInfo && (
+                <Popup
+                  tipSize={8}
+                  anchor="top"
+                  longitude={popupInfo.longitude}
+                  latitude={popupInfo.latitude}
+                  closeOnClick={false}
+                  onClose={setPopupInfo}
+                  className="cursor-pointer"
                 >
-                  <img src={marker} alt="marker" className="w-4" />
-                </Marker>
-              ))}
+                  <LieuInfo info={popupInfo} />
+                </Popup>
+              )}
             </ReactMapGL>
           </div>
         </div>

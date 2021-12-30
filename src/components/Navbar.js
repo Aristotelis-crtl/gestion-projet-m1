@@ -9,36 +9,36 @@ const Navbar = () => {
 
   return (
     <>
-      <nav class="relative select-none bg-blueperso lg:flex lg:items-stretch w-full">
-        <div class="flex flex-no-shrink items-stretch h-12">
+      <nav className="relative select-none bg-blueperso lg:flex lg:items-stretch w-full">
+        <div className="flex flex-no-shrink items-stretch h-12">
           <Link
             to="/"
-            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
           >
             Accueil
           </Link>
           <Link
             to="/apropos"
-            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
           >
             A propos
           </Link>
           <Link
             to="/temp"
-            class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
           >
             temp
           </Link>
-          <button class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+          <button className="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
             <svg
-              class="fill-current text-white"
+              className="fill-current text-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
             <svg
-              class="fill-current text-white"
+              className="fill-current text-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -46,9 +46,9 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
-          <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
-            <p class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
+        <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
+          <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            <p className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
               TODO: fonctionnalité
             </p>
           </div>

@@ -14,6 +14,9 @@ module.exports = {
       transitionDelay: {
         3000: "3000ms",
       },
+      width: {
+        90: "90%",
+      },
     },
   },
   variants: {
