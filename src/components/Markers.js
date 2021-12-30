@@ -19,10 +19,10 @@ const Markers = (props) => {
     >
       {
         {
-          culte: <Culte className="w-6" />,
-          monument: <Monument className="w-6" />,
-          musee: <Musee className="w-6" />,
-          place: <Place className="w-6" />,
+          culte: <Culte className="w-6 cursor-pointer" />,
+          monument: <Monument className="w-6 cursor-pointer" />,
+          musee: <Musee className="w-6 cursor-pointer" />,
+          place: <Place className="w-6 cursor-pointer" />,
         }[lieu.type]
       }
     </Marker>

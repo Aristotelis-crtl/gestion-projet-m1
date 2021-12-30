@@ -8,14 +8,16 @@
                 "latitude":48.85837,
                 "longitude":2.294481,
                 "type":"monument",
-                "ratings":3
+                "ratings":3,
+                "description": "Endroit cool avec belle vue"
              },
              {
                 "nom":"Musée du Louvres",
                 "latitude":48.861,
                 "longitude":2.335833,
                 "type":"place",
-                "ratings":4
+                "ratings":4,
+                "description": "Vue incroyable c dinque les tableaux"
              }
           ]
        },

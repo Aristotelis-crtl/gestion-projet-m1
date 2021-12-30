@@ -42,7 +42,6 @@ const Map = () => {
                   latitude={popupInfo.latitude}
                   closeOnClick={false}
                   onClose={setPopupInfo}
-                  className="cursor-pointer"
                 >
                   <LieuInfo info={popupInfo} />
                 </Popup>
