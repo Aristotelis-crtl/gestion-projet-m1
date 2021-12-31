@@ -26,7 +26,7 @@ const LieuInfo = (props) => {
           <h1 className="">{displayName}</h1>
           <p>Description:</p>
         </div>
-        <p>{info.description}</p>
+        <p className="text-xs">{info.description}</p>
         {stars()}
       </div>
     </>

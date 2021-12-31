@@ -6,9 +6,9 @@ import { ReactComponent as Monument } from "../svg/monument.svg";
 import { ReactComponent as Musee } from "../svg/musee.svg";
 import { ReactComponent as Place } from "../svg/place.svg";
 const Markers = (props) => {
-  const { data, onClick } = props;
+  const { city, onClick } = props;
 
-  return data[0].lieux.map((lieu, i) => (
+  return city.lieux.map((lieu, i) => (
     <Marker
       latitude={lieu.latitude}
       longitude={lieu.longitude}

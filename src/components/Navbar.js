@@ -4,12 +4,15 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
   const [title, setTitle] = useState("");
-  const url = useLocation();
   const showSidebar = () => setSidebar(!sidebar);
-
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
   return (
     <>
-      <nav className="relative select-none bg-blueperso lg:flex lg:items-stretch w-full">
+      <nav className="relative select-none bg-blueperso lg:flex lg:items-stretch w-full py-2">
         <div className="flex flex-no-shrink items-stretch h-12">
           <Link
             to="/"
@@ -22,12 +25,6 @@ const Navbar = () => {
             className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
           >
             A propos
-          </Link>
-          <Link
-            to="/temp"
-            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
-          >
-            temp
           </Link>
           <button className="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
             <svg
@@ -48,9 +45,16 @@ const Navbar = () => {
         </div>
         <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
           <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
-            <p className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
-              TODO: fonctionnalité
-            </p>
+            <div className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:bg-grey-dark space-x-2">
+              <p className="text-white">Pas d'idées?</p>
+              <select className="bg-white rounded-lg shadow-xl flex items-center cursor-pointer">
+                <option>France</option>
+                <option>USA</option>
+              </select>
+              <button className="bg-blueperso2 rounded-full text-white p-1 uppercase text-xs">
+                Découvrir
+              </button>
+            </div>
           </div>
         </div>
       </nav>

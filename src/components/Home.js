@@ -6,8 +6,8 @@ import { ReactComponent as Culte } from "../svg/culte.svg";
 import { ReactComponent as Monument } from "../svg/monument.svg";
 import { ReactComponent as Musee } from "../svg/musee.svg";
 import { ReactComponent as Place } from "../svg/place.svg";
+import { Link } from "react-router-dom";
 
-import ListItem from "./ListItem";
 const Home = () => {
   const [open, setOpen] = useState(true);
   const cities = useCities();
@@ -42,45 +42,47 @@ const Home = () => {
             }`}
           >
             {cities.map((city, key) => (
-              <li
-                className="relative inline-block mx-2 leading-normal w-90 m-0 mb-1 transition delay-3000 "
-                key={key}
-              >
-                <div>
-                  <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden">
-                    <div className="flex w-1/4 justify-between items-center">
-                      <p className="w-1/2 text-left text-blueperso ml-1">
-                        {city.ville}
-                      </p>
-                      <div className="flex grid grid-cols-4 items-center">
-                        {["culte", "monument", "place", "musee"].map(
-                          (type, i) => (
-                            <span
-                              className="flex grid grid-cols-2 items-center"
-                              key={i}
-                            >
-                              <p className="text-blueperso transition transition-colors delay-300">
+              <Link to={`/ville/${city.ville}`} key={key}>
+                <li
+                  className="relative inline-block mx-2 leading-normal w-90 m-0 mb-1 transition delay-3000 "
+                  key={key}
+                >
+                  <div>
+                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden">
+                      <div className="flex w-1/4 justify-between items-center">
+                        <p className="w-1/2 text-left text-blueperso ml-1">
+                          {city.ville}
+                        </p>
+                        <div className="flex grid grid-cols-4 items-center">
+                          {["culte", "monument", "place", "musee"].map(
+                            (type, i) => (
+                              <span
+                                className="flex grid grid-cols-2 items-center"
+                                key={i}
+                              >
+                                <p className="text-blueperso transition transition-colors delay-300">
+                                  {
+                                    city.lieux.filter((c) => c.type === type)
+                                      .length
+                                  }
+                                </p>
                                 {
-                                  city.lieux.filter((c) => c.type === type)
-                                    .length
+                                  {
+                                    culte: <Culte className="w-6" />,
+                                    monument: <Monument className="w-6" />,
+                                    musee: <Musee className="w-6" />,
+                                    place: <Place className="w-6" />,
+                                  }[type]
                                 }
-                              </p>
-                              {
-                                {
-                                  culte: <Culte className="w-6" />,
-                                  monument: <Monument className="w-6" />,
-                                  musee: <Musee className="w-6" />,
-                                  place: <Place className="w-6" />,
-                                }[type]
-                              }
-                            </span>
-                          )
-                        )}
+                              </span>
+                            )
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

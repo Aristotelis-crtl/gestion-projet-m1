@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         blueperso: "#074B7C",
+        blueperso2: "#47799D",
         yellowperso: "#FEC520",
       },
       zIndex: {

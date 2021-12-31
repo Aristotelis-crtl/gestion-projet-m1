@@ -4,6 +4,7 @@ import ReactMapGL, { Popup } from "react-map-gl";
 import data from "../data.json";
 import Markers from "./Markers";
 import LieuInfo from "./LieuInfo";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 const Map = () => {
   const [viewport, setViewport] = useState({
     width: "100%",
@@ -16,11 +17,21 @@ const Map = () => {
   const cities = data.cities;
   const [popupInfo, setPopupInfo] = useState(null);
 
+  const { ville } = useParams();
+  console.log(ville, "ville");
+
+  console.log(
+    cities.find((city) => city.ville === ville),
+    "cyties founded"
+  );
+
+  const city = cities.find((city) => city.ville === ville);
+
   return (
     <>
       <div>
         <div className="text-yellowperso flex justify-center my-2">
-          <h1>{cities[0].ville}</h1>
+          <h1>{city.ville}</h1>
         </div>
         <div className="flex h-screen items-center justify-center">
           <div
@@ -33,7 +44,7 @@ const Map = () => {
               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
               className="border border-red-800 rounded-xl"
             >
-              <Markers data={cities} onClick={setPopupInfo} />
+              <Markers city={city} onClick={setPopupInfo} />
               {popupInfo && (
                 <Popup
                   tipSize={8}
