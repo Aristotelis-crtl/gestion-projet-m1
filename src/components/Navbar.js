@@ -1,28 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
+import useCities from "../hooks/useCities";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
   const [title, setTitle] = useState("");
   const showSidebar = () => setSidebar(!sidebar);
+  const [country, setCountry] = useState("France");
+  console.log("country", country);
+  const histo = useHistory();
+  const location = useLocation();
+  console.log(location.pathname);
+  const cities = useCities();
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
+  const goToRandomCity = () => {
+    const city = cities[getRandomInt(0, cities.length)];
+    console.log(city, "onclick");
+    histo.push(`/ville/${city.ville}`);
+  };
   return (
     <>
       <nav className="relative select-none bg-blueperso lg:flex lg:items-stretch w-full py-2">
         <div className="flex flex-no-shrink items-stretch h-12">
           <Link
             to="/"
-            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+            className={`flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:text-yellowperso ${
+              location.pathname !== "/" ? "text-white" : "text-yellowperso"
+            }`}
           >
             Accueil
           </Link>
           <Link
             to="/apropos"
-            className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
+            className={`flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:text-yellowperso ${
+              location.pathname === "/" ? "text-white" : "text-yellowperso"
+            }`}
           >
             A propos
           </Link>
@@ -47,11 +63,18 @@ const Navbar = () => {
           <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
             <div className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:bg-grey-dark space-x-2">
               <p className="text-white">Pas d'idées?</p>
-              <select className="bg-white rounded-lg shadow-xl flex items-center cursor-pointer">
+              <select
+                className="bg-white rounded-lg shadow-xl flex items-center cursor-pointer p-1 text-gray-500 w-36"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+              >
                 <option>France</option>
                 <option>USA</option>
               </select>
-              <button className="bg-blueperso2 rounded-full text-white p-1 uppercase text-xs">
+              <button
+                className="bg-blueperso2 rounded-2xl text-white p-2 uppercase text-xs"
+                onClick={() => goToRandomCity()}
+              >
                 Découvrir
               </button>
             </div>

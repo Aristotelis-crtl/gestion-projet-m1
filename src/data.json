@@ -26,15 +26,15 @@
           "lieux":[
              {
                 "nom":"Tour Eiffel",
-                "latitude":48.85837,
-                "longitude":2.294481,
+                "latitude":43.5,
+                "longitude":3,
                 "type":"monument",
                 "ratings":3
              },
              {
                 "nom":"Musée du Louvres",
-                "latitude":48.861,
-                "longitude":2.335833,
+                "latitude":43.6,
+                "longitude":3,
                 "type":"culte",
                 "ratings":4
              }

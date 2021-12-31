@@ -9,7 +9,7 @@ import { ReactComponent as Place } from "../svg/place.svg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const cities = useCities();
 
   return (
@@ -49,8 +49,8 @@ const Home = () => {
                 >
                   <div>
                     <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden">
-                      <div className="flex w-1/4 justify-between items-center">
-                        <p className="w-1/2 text-left text-blueperso ml-1">
+                      <div className="flex items-center grid grid-cols-2">
+                        <p className="text-left text-blueperso ml-1">
                           {city.ville}
                         </p>
                         <div className="flex grid grid-cols-4 items-center">

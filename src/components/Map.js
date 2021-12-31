@@ -6,27 +6,19 @@ import Markers from "./Markers";
 import LieuInfo from "./LieuInfo";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 const Map = () => {
-  const [viewport, setViewport] = useState({
-    width: "100%",
-    height: "80%",
-    latitude: 48.8,
-    longitude: 2.3,
-    zoom: 8,
-  });
-
   const cities = data.cities;
   const [popupInfo, setPopupInfo] = useState(null);
 
   const { ville } = useParams();
-  console.log(ville, "ville");
-
-  console.log(
-    cities.find((city) => city.ville === ville),
-    "cyties founded"
-  );
 
   const city = cities.find((city) => city.ville === ville);
-
+  const [viewport, setViewport] = useState({
+    width: "100%",
+    height: "80%",
+    latitude: city.lieux[0].latitude,
+    longitude: city.lieux[0].longitude,
+    zoom: 8,
+  });
   return (
     <>
       <div>
