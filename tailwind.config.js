@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   purge: [],
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
@@ -18,6 +19,13 @@ module.exports = {
       width: {
         90: "90%",
       },
+      screen: {
+        xxs: "320px",
+      },
+    },
+    screens: {
+      xxs: "320px",
+      ...defaultTheme.screens,
     },
   },
   variants: {
