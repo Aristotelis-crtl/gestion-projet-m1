@@ -6,20 +6,51 @@ import { ReactComponent as Culte } from "../svg/culte.svg";
 import { ReactComponent as Monument } from "../svg/monument.svg";
 import { ReactComponent as Musee } from "../svg/musee.svg";
 import { ReactComponent as Place } from "../svg/place.svg";
+import RandomCity from "./RandomCity";
 import { Link } from "react-router-dom";
+import useBreakpoint from "../hooks/useBreakpoint";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
   const cities = useCities();
 
+  const bp = useBreakpoint();
   return (
     <>
-      <div className="w-full shadow-lg rounded-md bg-white  max-w-sm flex ml-14 content-div mt-8 z-10">
-        <div>
-          <img className="w-full image-cover rounded-t-md" src={pic} />
-          <div className="p-2 m-4 w-16 h-16 text-center text-white float-right group-hover:opacity-25">
-            <span className="text-base tracking-wide  font-bold border-b border-white font-sans"></span>
-            <span className="text-xs tracking-wide font-bold uppercase block font-sans"></span>
+      <div className="flex justify-center lg:w-4/6 lg:max-w-2xl lg:max-h-sm">
+        <div className="w-5/6 shadow-lg rounded-md bg-white flex mt-8 z-10">
+          <div>
+            <img className="rounded-t-md" src={pic} alt="montagne" />
+            <div className="p-2 text-left group-hover:opacity-25 ">
+              <p className="font-bold">Découvrez des villes.</p>
+              <p className="font-bold">Organisez vos futurs voyages.</p>
+              <p className="text-xs">
+                Nous vous proposons de découvrirs différentes villes dans les
+                pays du monde entier.
+              </p>
+            </div>
+            <div className="p-2 grid grid-cols-2 lg:grid-cols-1 lg:flex">
+              <div className="grid grid-rows-2 lg:flex lg:items-baseline">
+                <span className="flex items-baseline lg:mr-2">
+                  Lieu de culte:
+                  <Culte className="w-6" />
+                </span>
+                <span className="flex items-baseline lg:mr-2">
+                  Lieu de culte:
+                  <Musee className="w-6" />
+                </span>
+              </div>
+              <div className="grid grid-rows-2 lg:flex">
+                <span className="flex items-baseline lg:mr-2">
+                  Lieu de culte:
+                  <Monument className="w-6" />
+                </span>
+                <span className="flex items-baseline">
+                  <p>Lieu de culte:</p>
+                  <Place className="w-6" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -35,7 +66,7 @@ const Home = () => {
             <p className="ml-2"> Notre liste des villes:</p>
           </div>
         </div>
-        <div className="relative w-full h-64">
+        <div className={`relative w-full h-64 ${!open && "hidden"}`}>
           <ul
             className={`pl-0 pt-0 mt-0 list-none mb-2 align-right text-center transition-all delay-500 ease-out overflow-hidden ${
               !open ? "h-0" : "h-full"
@@ -85,6 +116,9 @@ const Home = () => {
               </Link>
             ))}
           </ul>
+        </div>
+        <div className="flex justify-center items-center">
+          {bp === "sm" || (bp === "xs" && <RandomCity />)}
         </div>
       </>
     </>
