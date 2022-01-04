@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import List from "./components/List";
 import Navbar from "./components/Navbar";
 import Map from "./components/Map";
+import Apropos from "./components/apropos";
 
 function App() {
   return (

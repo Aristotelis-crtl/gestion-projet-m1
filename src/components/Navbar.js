@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link
             to="/apropos"
             className={`flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal no-underline flex items-center hover:text-yellowperso ${
-              location.pathname === "/aproppos"
+              location.pathname === "/apropos"
                 ? "text-yellowperso"
                 : "text-white"
             }`}

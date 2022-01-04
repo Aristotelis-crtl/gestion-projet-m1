@@ -25,7 +25,7 @@ const Home = () => {
               <p className="font-bold">Découvrez des villes.</p>
               <p className="font-bold">Organisez vos futurs voyages.</p>
               <p className="text-xs">
-                Nous vous proposons de découvrirs différentes villes dans les
+                Nous vous proposons de découvrir différentes villes dans les
                 pays du monde entier.
               </p>
             </div>
