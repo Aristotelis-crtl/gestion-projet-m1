@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import ReactMapGL, { Popup } from "react-map-gl";
 import data from "../data.json";
@@ -12,17 +12,44 @@ const Map = () => {
   const { ville } = useParams();
 
   const city = cities.find((city) => city.ville === ville);
+
+  const centroid = city.lieux.map((c) => {
+    return { longitude: c.longitude, latitude: c.latitude };
+  });
+
+  useEffect(
+    () =>
+      setViewport({
+        ...viewport,
+        latitude: centroidCalculted().latitude,
+        longitude: centroidCalculted().longitude,
+      }),
+    [ville]
+  );
+
+  const centroidCalculted = () => {
+    let x = 0;
+    let y = 0;
+    let total = centroid.length;
+
+    x = centroid.reduce((prev, curr) => prev + curr.latitude, 0);
+    y = centroid.reduce((prev, curr) => prev + curr.longitude, 0);
+    return {
+      latitude: x / total,
+      longitude: y / total,
+    };
+  };
   const [viewport, setViewport] = useState({
     width: "100%",
     height: "80%",
-    latitude: city.lieux[0].latitude,
-    longitude: city.lieux[0].longitude,
+    latitude: centroidCalculted().latitude,
+    longitude: centroidCalculted().longitude,
     zoom: 12, //voir pour augmenter le zoom
   });
   return (
     <>
       <div>
-        <div className="text-yellowperso flex justify-center my-2">
+        <div className="text-yellowperso flex justify-center my-2 ">
           <h1>{city.ville}</h1>
         </div>
         <div className="flex h-screen items-center justify-center">
