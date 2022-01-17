@@ -1,6 +1,7 @@
 {
     "cities":[
        {
+          "pays": "France",
           "ville":"Paris",
           "lieux":[
              {
@@ -70,6 +71,7 @@
           ]
        },
        {
+         "pays": "France",
           "ville":"Lyon",
           "lieux":[
             {
@@ -139,6 +141,7 @@
           ]
        },
        {
+         "pays": "USA",
           "ville":"New York",
           "lieux":[
              {

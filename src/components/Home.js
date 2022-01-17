@@ -32,7 +32,7 @@ const Home = () => {
             <div className="p-2 grid grid-cols-2 lg:grid-cols-1 lg:flex">
               <div className="grid grid-rows-2 lg:flex lg:items-baseline">
                 <span className="flex items-baseline lg:mr-2">
-                  Lieu de culte:
+                  Bâtiments religieux:
                   <Culte className="w-6" />
                 </span>
                 <span className="flex items-baseline lg:mr-2">
@@ -42,11 +42,11 @@ const Home = () => {
               </div>
               <div className="grid grid-rows-2 lg:flex">
                 <span className="flex items-baseline lg:mr-2">
-                  Lieu de culte:
+                  Monuments:
                   <Monument className="w-6" />
                 </span>
                 <span className="flex items-baseline">
-                  <p>Lieu de culte:</p>
+                  <p>Places:</p>
                   <Place className="w-6" />
                 </span>
               </div>
