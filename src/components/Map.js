@@ -17,7 +17,7 @@ const Map = () => {
     height: "80%",
     latitude: city.lieux[0].latitude,
     longitude: city.lieux[0].longitude,
-    zoom: 8, //voir pour augmenter le zoom
+    zoom: 12, //voir pour augmenter le zoom
   });
   return (
     <>

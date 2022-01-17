@@ -15,7 +15,8 @@ const RandomCity = () => {
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   const goToRandomCity = () => {
-    const city = cities[getRandomInt(0, cities.length)];
+    const cityFiltered = cities.filter((city) => city.pays === country);
+    const city = cityFiltered[getRandomInt(0, cityFiltered.length)];
     histo.push(`/ville/${city.ville}`);
   };
 

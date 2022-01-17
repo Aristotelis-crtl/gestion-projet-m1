@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
 const About = () => {
   return (
     <div className="w-1/2">
       <div className="w-full shadow-lg rounded-md bg-white  max-w-sm flex ml-14 content-div mt-8 z-10">
         <div className="flex justify-center my-2">
           <p>
-            My Travel est un site créé et maintenu par Julian JABAN, Remi
+            My Travel est un site créé et maintenu par Julian JABIN, Remi
             BLONDIN, Darick BITEGHE-BI-NGYE et Guillaume FAYET
           </p>
           <p>

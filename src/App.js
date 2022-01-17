@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import List from "./components/List";
 import Navbar from "./components/Navbar";
 import Map from "./components/Map";
-import Apropos from "./components/apropos";
+import About from "./components/About";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/list" exact component={List} />
+        <Route path="/apropos" exact component={About} />
         <Route path="/ville/:ville" component={Map} />
       </Switch>
     </Router>
