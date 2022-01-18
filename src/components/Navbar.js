@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import useBreakpoint from "../hooks/useBreakpoint";
 import RandomCity from "./RandomCity";
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
-  const [title, setTitle] = useState("");
-  const showSidebar = () => setSidebar(!sidebar);
   const bp = useBreakpoint();
   const location = useLocation();
 
