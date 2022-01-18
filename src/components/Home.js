@@ -58,7 +58,7 @@ const Home = () => {
         <div className="flex justify-center mt-8">
           <div
             onClick={() => setOpen(!open)}
-            className="w-11/12 bg-yellowperso text-blueperso rounded-full flex py-4 px-2"
+            className="w-11/12 bg-yellowperso text-blueperso rounded-full flex py-4 px-2 cursor-pointer"
           >
             <p className="rounded-full bg-blueperso flex items-center justify-center text-white h-6 w-6 text-xs">
               !!!
@@ -68,14 +68,14 @@ const Home = () => {
         </div>
         <div className={`relative w-full h-64 ${!open && "hidden"}`}>
           <ul
-            className={`pl-0 pt-0 mt-0 list-none mb-2 align-right text-center transition-all delay-500 ease-out overflow-hidden ${
+            className={`pl-0 pt-0 mt-0 list-none mb-2 align-right text-center transition-all ease-out duration-500 overflow-hidden ${
               !open ? "h-0" : "h-full"
             }`}
           >
             {cities.map((city, key) => (
               <Link to={`/ville/${city.ville}`} key={key}>
                 <li
-                  className="relative inline-block mx-2 leading-normal w-90 m-0 mb-1 transition delay-3000 "
+                  className="relative inline-block mx-2 leading-normal w-90 m-0 mb-1 transition duration-1000"
                   key={key}
                 >
                   <div>

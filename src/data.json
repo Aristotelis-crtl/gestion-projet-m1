@@ -16,7 +16,7 @@
                 "nom":"Musée du Louvres",
                 "latitude":48.861,
                 "longitude":2.335833,
-                "type":"musée",
+                "type":"musee",
                 "ratings":4,
                 "description": "Le musée du Louvre est un musée situé dans le 1ᵉʳ arrondissement de Paris"
              },
@@ -40,7 +40,7 @@
                "nom":"Musée d'Orsay",
                "latitude":48.859961,
                "longitude":2.326561,
-               "type":"musée",
+               "type":"musee",
                "ratings":4,
                "description": "Musée pluridisciplinaire exposant la plus riche collection de tableaux impressionnistes et post impressionnistes au monde dans l'ancienne gare d'Orsay à Paris."
             },
@@ -94,7 +94,7 @@
                "nom":"Musée des Confluences ",
                "latitude": 45.7292  ,
                "longitude" :  4.8184  ,
-               "type":"musée",
+               "type":"musee",
                "ratings":4,
                "description": "Le musée des Confluences est un musée d'histoire naturelle, d'anthropologie, des sociétés et des civilisations situé à Lyon, dans la région Auvergne-Rhône-Alpes en France. Héritier du Musée d'histoire naturelle Guimet de Lyon, il est ouvert en 2014 et hébergé dans un bâtiment de style déconstructiviste de l’agence d'architecture Coop Himmelb(l)au2, dans le quartier de La Confluence, sur la pointe sud de la Presqu'île de Lyon, au confluent du Rhône et de la Saône (2e arrondissement de Lyon).   "
             },
@@ -102,7 +102,7 @@
                "nom":"Musée des Frères Lumières   ",
                "latitude": 45.7414   ,
                "longitude" : 4.8704  ,
-               "type":"musée",
+               "type":"musee",
                "ratings":4,
                "description": "L'Institut Lumière est une association loi de 1901 créée à Lyon en 1982. Il consacre son activité à la diffusion et à la conservation du patrimoine cinématographique.     "
             },
