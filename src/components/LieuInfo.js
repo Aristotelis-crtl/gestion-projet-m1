@@ -7,7 +7,7 @@ const LieuInfo = (props) => {
 
   const stars = () => {
     return (
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-1">
         <Star fill={`${info.ratings > 0 && "yellow"}`} className={`w-4`} />
         <Star className="w-4" fill={`${info.ratings > 1 && "yellow"}`} />
         <Star className="w-4" fill={`${info.ratings > 2 && "yellow"}`} />
@@ -16,8 +16,6 @@ const LieuInfo = (props) => {
       </div>
     );
   };
-
-  <p>dzqdzq</p>;
 
   return (
     <>

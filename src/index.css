@@ -11,3 +11,7 @@
   border-top-color: #074b7c !important;
   border-bottom-color: #074b7c !important;
 }
+.mapboxgl-popup-close-button {
+  margin-right: 0.5rem;
+  color: white;
+}
