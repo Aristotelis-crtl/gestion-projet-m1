@@ -30,24 +30,24 @@ const Home = () => {
               </p>
             </div>
             <div className="p-2 grid grid-cols-2 lg:grid-cols-1 lg:flex">
-              <div className="grid grid-rows-2 lg:flex lg:items-baseline">
-                <span className="flex items-baseline lg:mr-2">
+              <div className="grid grid-rows-2 lg:flex lg:items-baseline text-xs md:text-base">
+                <span className="flex items-baseline lg:mr-2 whitespace-nowrap">
                   Bâtiments religieux:
-                  <Culte className="w-6" />
+                  <Culte className="w-4 md:w-6" />
                 </span>
-                <span className="flex items-baseline lg:mr-2">
+                <span className="flex items-baseline lg:mr-2 whitespace-nowrap">
                   Lieu de culte:
-                  <Musee className="w-6" />
+                  <Musee className="w-4 md:w-6" />
                 </span>
               </div>
-              <div className="grid grid-rows-2 lg:flex">
+              <div className="grid grid-rows-2 lg:flex lg:items-baseline text-xs md:text-base">
                 <span className="flex items-baseline lg:mr-2">
                   Monuments:
-                  <Monument className="w-6" />
+                  <Monument className="w-4 md:w-6" />
                 </span>
                 <span className="flex items-baseline">
                   <p>Places:</p>
-                  <Place className="w-6" />
+                  <Place className="w-4 md:w-6" />
                 </span>
               </div>
             </div>

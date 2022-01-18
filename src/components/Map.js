@@ -24,6 +24,7 @@ const Map = () => {
         latitude: centroidCalculted().latitude,
         longitude: centroidCalculted().longitude,
       }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [ville]
   );
 
