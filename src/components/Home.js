@@ -6,6 +6,9 @@ import { ReactComponent as Culte } from "../svg/culte.svg";
 import { ReactComponent as Monument } from "../svg/monument.svg";
 import { ReactComponent as Musee } from "../svg/musee.svg";
 import { ReactComponent as Place } from "../svg/place.svg";
+import { ReactComponent as ArrowDown } from "../svg/arrowdown.svg";
+import { ReactComponent as ArrowRight } from "../svg/arrowright.svg";
+
 import RandomCity from "./RandomCity";
 import { Link } from "react-router-dom";
 import useBreakpoint from "../hooks/useBreakpoint";
@@ -58,12 +61,15 @@ const Home = () => {
         <div className="flex justify-center mt-8">
           <div
             onClick={() => setOpen(!open)}
-            className="w-11/12 bg-yellowperso text-blueperso rounded-full flex py-4 px-2 cursor-pointer"
+            className="w-11/12 bg-yellowperso text-blueperso rounded-full flex justify-between py-4 px-2 cursor-pointer"
           >
-            <p className="rounded-full bg-blueperso flex items-center justify-center text-white h-6 w-6 text-xs">
-              !!!
-            </p>
-            <p className="ml-2"> Notre liste des villes:</p>
+            <div className="flex">
+              <p className="rounded-full bg-blueperso flex items-center justify-center text-white h-6 w-6 text-xs">
+                !!!
+              </p>
+              <p className="ml-2"> Notre liste des villes:</p>
+            </div>
+            <ArrowDown className="w-4 mr-1" />
           </div>
         </div>
         <div className={`relative w-full h-64 ${!open && "hidden"}`}>
@@ -79,7 +85,7 @@ const Home = () => {
                   key={key}
                 >
                   <div>
-                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden">
+                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden justify-between">
                       <div className="flex items-center grid grid-cols-2">
                         <p className="text-left text-blueperso ml-1">
                           {city.ville}
@@ -110,6 +116,9 @@ const Home = () => {
                           )}
                         </div>
                       </div>
+                      {(bp !== "sm" || bp !== "xs") && (
+                        <ArrowRight className="w-4 mr-2" />
+                      )}
                     </div>
                   </div>
                 </li>

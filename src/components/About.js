@@ -6,7 +6,7 @@ import useBreakpoint from "../hooks/useBreakpoint";
 const About = () => {
   const bp = useBreakpoint();
   return (
-    <div className="p-10">
+    <div className="p-10 2xl:w-2/3">
       <div className="max-w-sm rounded overflow-hidden shadow-lg md:max-w-none">
         <img
           className="w-full md:max-h-64"
