@@ -85,7 +85,7 @@ const Home = () => {
                   key={key}
                 >
                   <div>
-                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden justify-between">
+                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden justify-between items-center">
                       <div className="flex items-center grid grid-cols-2">
                         <p className="text-left text-blueperso ml-1">
                           {city.ville}
