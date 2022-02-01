@@ -116,7 +116,7 @@ const Home = () => {
                           )}
                         </div>
                       </div>
-                      {(bp !== "sm" || bp !== "xs") && (
+                      {(bp === "lg" || bp === "xl") && (
                         <ArrowRight className="w-4 mr-2" />
                       )}
                     </div>
