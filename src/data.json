@@ -147,7 +147,7 @@
              {
                 "nom":"Empire State Building",
                 "latitude":	40.748817,
-                "longitude"-73.985428,
+                "longitude": -73.985428,
                 "type":"monument",
                 "ratings":3,
                  "description": "L'Empire State Building est une tour emblématique de la villed e New York"
