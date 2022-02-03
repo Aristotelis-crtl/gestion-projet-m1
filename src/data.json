@@ -145,18 +145,36 @@
           "ville":"New York",
           "lieux":[
              {
-                "nom":"Tour Eiffel",
-                "latitude":48.85837,
-                "longitude":2.294481,
+                "nom":"Empire State Building",
+                "latitude":	40.748817,
+                "longitude"-73.985428,
                 "type":"monument",
-                "ratings":3
+                "ratings":3,
+                 "description": "L'Empire State Building est une tour emblématique de la villed e New York"
              },
              {
-                "nom":"Musée du Louvres",
-                "latitude":48.861,
-                "longitude":2.335833,
-                "type":"culte",
-                "ratings":4
+                "nom":"Central Park",
+                "latitude":40.771133,
+                "longitude":-73.974187,
+                "type":"place",
+                "ratings":2,
+                "description": "Plus grand Park de la ville de New York"
+             },
+             {
+                "nom":"Time Square",
+                "latitude":42.490707,
+                "longitude":-76.297978,
+                "type":"place",
+                "ratings":3,
+                "description": "Plus la plus connue de la ville"
+             },
+             {
+                "nom":"Madison Square Garden",
+                "latitude":40.750298,
+                "longitude":-73.993324,
+                "type":"monument",
+                "ratings":3,
+                "description": "Bastion du sport Américain"
              }
           ]
        }
