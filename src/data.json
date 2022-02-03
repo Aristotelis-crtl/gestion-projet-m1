@@ -99,7 +99,7 @@
                "description": "Le musée des Confluences est un musée d'histoire naturelle, d'anthropologie, des sociétés et des civilisations situé à Lyon, dans la région Auvergne-Rhône-Alpes en France. Héritier du Musée d'histoire naturelle Guimet de Lyon, il est ouvert en 2014 et hébergé dans un bâtiment de style déconstructiviste de l’agence d'architecture Coop Himmelb(l)au2, dans le quartier de La Confluence, sur la pointe sud de la Presqu'île de Lyon, au confluent du Rhône et de la Saône (2e arrondissement de Lyon).   "
             },
             {
-               "nom":"Musée des Frères Lumières   ",
+               "nom":"Musée des Frères Lumières",
                "latitude": 45.7414   ,
                "longitude" : 4.8704  ,
                "type":"musee",
