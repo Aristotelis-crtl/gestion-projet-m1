@@ -17,17 +17,6 @@ const Map = () => {
     return { longitude: c.longitude, latitude: c.latitude };
   });
 
-  useEffect(
-    () =>
-      setViewport({
-        ...viewport,
-        latitude: centroidCalculted().latitude,
-        longitude: centroidCalculted().longitude,
-      }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [ville]
-  );
-
   const centroidCalculted = () => {
     let x = 0;
     let y = 0;
@@ -40,6 +29,23 @@ const Map = () => {
       longitude: y / total,
     };
   };
+  console.log(
+    "centroid",
+    centroidCalculted().latitude,
+    centroidCalculted().longitude
+  );
+
+  useEffect(
+    () =>
+      setViewport({
+        ...viewport,
+        latitude: centroidCalculted().latitude,
+        longitude: centroidCalculted().longitude,
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [ville]
+  );
+
   const [viewport, setViewport] = useState({
     width: "100%",
     height: "80%",
