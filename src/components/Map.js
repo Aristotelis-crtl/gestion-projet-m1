@@ -29,12 +29,6 @@ const Map = () => {
       longitude: y / total,
     };
   };
-  console.log(
-    "centroid",
-    centroidCalculted().latitude,
-    centroidCalculted().longitude
-  );
-
   useEffect(
     () =>
       setViewport({
