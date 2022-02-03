@@ -115,7 +115,7 @@
                "description": "Cathédrale Saint-Jean est le siège épiscopal de l'archidiocèse de Lyon. Elle est située dans le cinquième arrondissement de Lyon, au cœur du quartier médiéval et Renaissance du Vieux Lyon, dont elle est un des éléments marquants.   "
             },
             {
-               "nom":"Basilique Fourvière   ",
+               "nom":"Basilique Fourvière",
                "latitude":  45.762361 ,
                "longitude" :   4.821866   ,
                "type":"culte",
@@ -131,7 +131,7 @@
                "description": "Le parc de la Tête d'or est un parc urbain public situé à Lyon, l'un des plus grands de France.   "
             },
             {
-               "nom":"Place des terreaux  ",
+               "nom":"Place des terreauxs",
                "latitude":  45.7678 ,
                "longitude" :  4.8342  ,
                "type":"place",
