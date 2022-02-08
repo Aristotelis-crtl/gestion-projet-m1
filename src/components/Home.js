@@ -72,7 +72,7 @@ const Home = () => {
             <ArrowDown className="w-4 mr-1" />
           </div>
         </div>
-        <div className={`relative w-full h-64 ${!open && "hidden"}`}>
+        <div className={`relative w-full ${!open && "hidden"}`}>
           <ul
             className={`pl-0 pt-0 mt-0 list-none mb-2 align-right text-center transition-all ease-out duration-500 overflow-hidden ${
               !open ? "h-0" : "h-full"
@@ -85,7 +85,7 @@ const Home = () => {
                   key={key}
                 >
                   <div>
-                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl pl-2 border border-black overflow-hidden justify-between items-center">
+                    <div className="flex bg-yellowperso text-2xl no-underline rounded-2xl px-2 border border-black overflow-hidden justify-between items-center">
                       <div className="flex items-center grid grid-cols-2">
                         <p className="text-left text-blueperso ml-1">
                           {city.ville}
@@ -105,10 +105,34 @@ const Home = () => {
                                 </p>
                                 {
                                   {
-                                    culte: <Culte className="w-6" />,
-                                    monument: <Monument className="w-6" />,
-                                    musee: <Musee className="w-6" />,
-                                    place: <Place className="w-6" />,
+                                    culte: (
+                                      <Culte
+                                        className={`${
+                                          bp === "xs" ? "w-4" : "w-6"
+                                        }`}
+                                      />
+                                    ),
+                                    monument: (
+                                      <Monument
+                                        className={`${
+                                          bp === "xs" ? "w-4" : "w-6"
+                                        }`}
+                                      />
+                                    ),
+                                    musee: (
+                                      <Musee
+                                        className={`${
+                                          bp === "xs" ? "w-4" : "w-6"
+                                        }`}
+                                      />
+                                    ),
+                                    place: (
+                                      <Place
+                                        className={`${
+                                          bp === "xs" ? "w-4" : "w-6"
+                                        }`}
+                                      />
+                                    ),
                                   }[type]
                                 }
                               </span>
